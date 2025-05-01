@@ -83,8 +83,18 @@ text.addEventListener("input", () => {
     updateScore();          
     text.value = "";        
     time += 5;              
-    updateTime();           
+    timeEl.innerHTML = `${time}s`;
+    text.style.border = "5px solid green";
+    
+  } 
+  else
+  {
+    text.style.border = "5px solid red";
+    
+  }
+   if (typedText === "")
+  {
+    text.style.border = "";
   }
 });
-
 
